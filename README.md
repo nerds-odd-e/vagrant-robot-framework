@@ -18,14 +18,19 @@ $ vagrant up
 $ vagrant ssh
 # Log into the VM
 
-$ pybot --version
-Robot Framework 2.8.6 (Python 2.7.6 on linux2)
+$ vagrant ssh -c 'pybot src/path/to/your/test'
+# Run tests
+
+$ vagrant ssh -c 'pybot src/path/to/your/test' -- -x
+# Run tests in headless mode
 ```
 
 ## What's Inside?
 
- * Python
+ * Python 2.7
  * pip
  * VirtualEnv
- * Robot Framework
- * Selenium2Library
+ * Robot Framework 2.8.6
+ * Selenium2Library 1.6.0
+ * Firefox
+ * Xvfb
